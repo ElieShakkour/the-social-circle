@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>User page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/tsc.css" />
+</head>
+<div class="menu">
+       
+  <img src="logo.png" height="25" />
+  <a href="/" class="menu-item"><div class="inner-menu-item">Welcome page</div></a>
+  <a href="/signin" class="menu-item"><div class="inner-menu-item">Sign in</div></a>
+</div> 
+<body>
+
+  
+ 
+
+  <% if(typeof alert != 'undefined') { %>
+    <% alert.forEach(function(error) { %>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <%= error.msg %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+    <% }) %>
+<% } %>
+<section class="vh-300" style="color: #A4B3B6;">
+<form method="post" action="/signup" >
+  <section class="vh-300" style="color: #A4B3B6;">
+ 
+    <div class="container py-5 h-200">
+      <div class="imagecontainer boxshadow">
+     <center><img class="logo" src="logo.png "  /></center>
+    </div> 
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+           
+            <div class="card-body p-5 text-center">
+
+              <h3 class="mb-5">Signup</h3>
+              
+        <div class="form-group">
+            <label>Email address</label>
+            <input type="email" name="email" class="form-control" aria-describedby="emailHelp"
+                placeholder="Enter email">
+           
+          </div>
+          <div>
+            <% if(check){ %>
+              <h6>Email alrady used</h6>
+          <% } else{ %>  
+              <br>
+          <% } %>
+
+        </div>
+        
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="username" class="form-control" placeholder="Full Name">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" name="tel" class="form-control" placeholder="Phone Number">
+          </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          
+
+          
+          <button type="submit" value="submit" class="btn btn-primary">Signup</button>
+          <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="signin"
+            class="fw-bold text-body"><u>Login here</u></a></p>
+          
+    </form>
+</div>
+  </form>
+</div>
+
+</body>
+
+</html>

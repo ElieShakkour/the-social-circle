@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>User page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/tsc.css" />
+</head>
+<div class="menu">
+       
+  <img src="logo.png" height="25" />
+ 
+  <a href="/home?id=<%= id %>" class="menu-item"><div class="inner-menu-item">Back</div></a>
+  
+</div>  
+
+<body>
+    
+
+</div>
+
+
+  
+<form method="post" action="/addInterest">
+    
+  <section class="vh-300" >  
+        <div class="container">
+          <div class="row d-flex justify-content-center align-items-center h-100 " >
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card shadow-2-strong" style="border-radius: 1rem; margin-top: 10%">
+                <div class="card-body p-5 text-center">
+      
+                  <h3 class="mb-5">Add Interes</h3>
+      
+                  <div class="form-group">
+                    <label>Interest</label>
+                    <input type="text" name="interest" class="form-control" aria-describedby="emailHelp"
+                        placeholder="Enter Interest">
+                </div>
+                
+               
+      
+                  <button class="btn" type="submit">Add Interest</button>
+                  
+                    </div> 
+                    
+              </div>
+                
+            </div>
+              
+          </div>
+        </div>
+      </section>
+      
+</form>
+</body>
+
+</html>
